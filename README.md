@@ -78,13 +78,20 @@ Tailwind CSS: Used for modern, responsive design and animations.
 
 src/app
 user-list.component.ts - Displays the list of users.
+
 user-details.component.ts - Shows detailed information about a selected user.
+
 caching.service.ts - Manages caching of HTTP requests.
+
 loading.service.ts - Controls the display of the loading UI.
+
 user-details.service.ts - Fetches user details and integrates with caching.
+
 app.module.ts - Main module of the application with routing and state management setup.
+
 app-routing.module.ts - Configures routing for navigation between pages.
-Contributing
+
+## Contributing
 
 Feel free to contribute to this project by submitting pull requests or opening issues. For any questions or feedback, please contact [sara.habib48@gmail.com].
 
