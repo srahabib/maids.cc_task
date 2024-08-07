@@ -1,0 +1,54 @@
+<!-- src/app/user-list/user-list.component.html -->
+<div class="max-w-7xl mx-auto mt-5">
+  <div class="p-4 bg-white rounded-lg border sm:p-8 dark:bg-gray-800">
+    <div class="flex justify-center items-center mb-4">
+      <input
+        type="text"
+        class="p-2 border rounded-lg"
+        placeholder="Search by ID..."
+        (input)="onSearch($event)"
+      />
+    </div>
+    <div class="flow-root">
+      <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+        <li
+          *ngFor="
+            let user of filteredUsers
+              | paginate : { itemsPerPage: pageSize, currentPage: page }
+          "
+          class="py-3 sm:py-4"
+          (click)="onUserClick(user.id)"
+        >
+          <div class="flex items-center space-x-4">
+            <div class="flex-shrink-0">
+              <img
+                class="w-8 h-8 rounded-full"
+                [src]="user.avatar"
+                [alt]="user.first_name + ' ' + user.last_name"
+              />
+            </div>
+            <div class="flex-1 min-w-0">
+              <p class="text-sm font-medium text-gray-900 truncate">
+                {{ user.first_name }} {{ user.last_name }}
+              </p>
+              <div class="flex items-center space-x-1">
+                <img src="/id_icon.jpg" alt="ID Icon" class="w-4 h-4" />
+                <p class="text-sm text-gray-500 truncate">{{ user.id }}</p>
+              </div>
+            </div>
+            <div
+              class="inline-flex items-center text-sm font-medium text-gray-500"
+            >
+              {{ user.email }}
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="flex justify-center mt-4">
+      <pagination-controls
+        (pageChange)="pageChange($event)"
+      ></pagination-controls>
+    </div>
+  </div>
+</div>
