@@ -1,17 +1,23 @@
+// user.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { CachingService } from './caching.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://reqres.in/api/users';
+  private baseUrl = 'https://reqres.in/api/users';
 
-  constructor(private http: HttpClient) {}
+  constructor(private cachingService: CachingService) {}
 
   getUsers(page: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}?page=${page}`);
+    const url = `${this.baseUrl}?page=${page}`;
+    return this.cachingService.get<any>(url);
+  }
+
+  getUserById(id: number): Observable<any> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.cachingService.get<any>(url);
   }
 }
