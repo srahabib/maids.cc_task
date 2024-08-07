@@ -34,7 +34,10 @@ Visit http://localhost:4200 in your browser to view the application.
 ## Page Layout
 
 Header: Contains a search bar for finding users by ID.
+![image](https://github.com/user-attachments/assets/f71fe472-d8e9-4e42-9051-930d673b6704)
+
 User List: Displays user cards in a horizontally centered, paginated format.
+![image](https://github.com/user-attachments/assets/fa247a10-9d46-4861-bf2f-250c3454da50)
 
 ## Data Retrieval
 
@@ -44,8 +47,10 @@ User Details: Fetch detailed information for a single user from https://reqres.i
 ## Navigation
 
 User Cards: Click on a user card to navigate to the detailed information page for the selected user.
+![image](https://github.com/user-attachments/assets/01368b41-793f-4af2-bbc0-04112a88aaa5)
 
 Search Functionality: Use the instant search field in the header to search for users by ID and navigate to the user details page if the user exists.
+![image](https://github.com/user-attachments/assets/8bf85d81-7810-4f16-82f5-592380e74a22)
 
 ## User Details Page
 
