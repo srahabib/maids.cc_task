@@ -1,7 +1,10 @@
 <app-header></app-header>
 <app-loading></app-loading>
 
-<main class="flex items-center justify-center">
+<app-todo></app-todo>
+<router-outlet></router-outlet>
+
+<main class="flex items-center justify-center m-10">
   <div class="text-center">
     <button
       class="px-4 bg-primary py-2 rounded text-white transition-all duration-300 ease-in-out"
@@ -21,4 +24,3 @@
     </div>
   </div>
 </main>
-<router-outlet></router-outlet>

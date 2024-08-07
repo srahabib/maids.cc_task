@@ -11,7 +11,8 @@ import { LoadingComponent } from './loading/loading.component';
 import { LoadingInterceptor } from './Interceptors/loading.interceptor';
 import { LoadingService } from './Service/loading.service';
 import { HoldableDirective } from './holdable.directive';
-
+import { AppStoreModule } from './store/app.module';
+import { TodoComponent } from './todo/todo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +20,15 @@ import { HoldableDirective } from './holdable.directive';
     UserListComponent,
     UserDetailsComponent,
     LoadingComponent,
-    HoldableDirective
+    HoldableDirective,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    AppStoreModule
   ],
   providers: [
     provideClientHydration(),
